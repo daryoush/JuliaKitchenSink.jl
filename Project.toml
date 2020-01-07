@@ -3,6 +3,11 @@ uuid = "e794a6cc-0a6f-11ea-309f-53a2f22cc92d"
 authors = ["Daryoush Mehrtash <dmehrtash@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+TimeSeries = "9e3dc215-6440-5c97-bce1-76c03772f85e"
+TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
+
 [compat]
 julia = "1"
 

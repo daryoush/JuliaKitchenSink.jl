@@ -1,0 +1,16 @@
+t = Template(dir=joinpath(homedir(), "Documents/projects/julia"),
+           manifest=true,
+           plugins=[
+               TravisCI(),
+               CodeCov(; config_file=nothing),
+               Coveralls(),
+               GitHubPages(),
+           ],
+       )
+
+
+Note:  Does Manifest.yaml need to be in git https://discourse.julialang.org/t/does-manifest-toml-belong-in-the-repository/12029
+
+
+The Manifest allows someone to replicate the exact version of the dependencies that was recorded in the manifest on e.g. another machine. For a package that is to be used as a library, this is not super useful because there will be some other Manifest dictating the versions of what is installed.
+However, for an “application”, i.e. something at “top level” (say your julia code to do the simulations in a scientific paper) then it is likely useful to be able to replicate that exact state and the Manifest is thus useful to check in.
