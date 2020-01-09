@@ -4,6 +4,7 @@
 using TableReader
 using DataFrames
 using TimeZones
+using Dates
 
 url = "https://realized.oxford-man.ox.ac.uk/images/oxfordmanrealizedvolatilityindices.zip"
 dataframe = readcsv(`unzip -p data/oxfordmanrealizedvolatilityindices.zip oxfordmanrealizedvolatilityindices.csv `)
@@ -74,7 +75,7 @@ namesOfIndicators = [name for (name, value) in coldict if eltype(value) == Float
 # Hurst index is how the ζ changees with different q
 # note  q is the q-moment of the delayed time series.
 
-log_σ(σ_squre::Float64) = log(√σ_squ
+log_σ(σ_squre::Float64) = log(√σ_squ)
 
 logσt(σ_squres) = log_σ.(σ_squres)
 dataframe.rv10

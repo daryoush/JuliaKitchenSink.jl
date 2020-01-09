@@ -5,8 +5,11 @@ version = "0.1.0"
 
 [deps]
 DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
+TableReader = "70df011a-6618-58d7-8e16-3cf9e384cb47"
 TimeSeries = "9e3dc215-6440-5c97-bce1-76c03772f85e"
 TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
+Transformers = "21ca0261-441d-5938-ace7-c90938fde4d4"
 
 [compat]
 julia = "1"
